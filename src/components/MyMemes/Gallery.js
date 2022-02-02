@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from "react";
-import i1 from "../../images1/1c1uej.jpg";
-import i2 from "../../images1/28j0te.jpg";
-import i3 from "../../images1/63n7am.jpg";
-import i4 from "../../images1/63n79e.jpg";
+// import i1 from "../../images1/1c1uej.jpg";
+// import i2 from "../../images1/28j0te.jpg";
+// import i3 from "../../images1/63n7am.jpg";
+// import i4 from "../../images1/63n79e.jpg";
 import "../Styles/Gallery.css";
 import CloseIcon from "@material-ui/icons/Close";
 import { UserData } from "../../fire";

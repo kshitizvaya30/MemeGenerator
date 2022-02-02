@@ -1,19 +1,23 @@
 import axios from "axios";
 
-export const MemeData = () => {
+export const MemeData = async () => {
   var config = {
     method: "get",
     url: "https://api.imgflip.com/get_memes",
     headers: {},
   };
 
-  axios(config)
-    .then(function (response) {
-      localStorage.setItem("memes", JSON.stringify(response.data.data));
-    })
-    .catch(function (error) {
-      console.log(error);
-    });
+  const response = await axios.get(config.url);
+  localStorage.setItem("memes", JSON.stringify(response.data.data));
+
+  return response;
+  // axios(config)
+  //   .then(function (response) {
+  //     localStorage.setItem("memes", JSON.stringify(response.data.data));
+  //   })
+  //   .catch(function (error) {
+  //     console.log(error);
+  //   });
 };
 
 export const RandomMeme = () => {

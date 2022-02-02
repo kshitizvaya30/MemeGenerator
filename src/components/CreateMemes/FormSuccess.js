@@ -10,8 +10,13 @@ const FormSuccess = (props) => {
   const [bottomText, setBottomText] = useState("Enter Bottom text");
 
   useEffect(() => {
-    MemeData();
-    setImageData(RandomMeme());
+    async function generate() {
+      // body...
+      await MemeData();
+      setImageData(RandomMeme());
+    }
+    
+    generate();
   }, []);
 
   const [displayMemes, setDispalyMemes] = useState(false);
